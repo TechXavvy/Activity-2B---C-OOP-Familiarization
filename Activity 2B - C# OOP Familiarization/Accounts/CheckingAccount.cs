@@ -23,6 +23,12 @@ namespace Activity_2B___C__OOP_Familiarization.Accounts
                 return;
             }
 
+            if (amount <= 0)
+            {
+                Console.WriteLine(">>> Error! This amount cannot be withdrew. <<<");
+                return;
+            }
+
             Balance -= amount;
             AddTransaction("Withdrew", amount);
             Console.WriteLine($">>> Succesfully withdrew P{amount} from {AccountHolderName}'s checking account. Thank you for using our service! <<<");
